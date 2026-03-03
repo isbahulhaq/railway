@@ -1,0 +1,17 @@
+{
+  "build": {
+    "nixpacksPlan": {
+      "phases": {
+        "setup": {
+          "nixPkgs": ["python39", "nodejs", "nss", "at-spi2-core", "gtk3", "libgpg-error"]
+        },
+        "build": {
+          "cmds": [
+            "pip install -r requirements.txt",
+            "playwright install"
+          ]
+        }
+      }
+    }
+  }
+}
